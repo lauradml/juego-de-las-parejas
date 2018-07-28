@@ -1,5 +1,54 @@
+@charset "UTF-8";
+
 body {
   height: 100vh;
+}
+
+.titulo {
+  text-align: center;
+  font-family: arial;
+}
+
+.content-formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.button-comenzar {
+  background: #ffffff;
+  border-style: none;
+  font-size: 16px￼;
+  font-weight: bold;
+  border: 2px solid #33ccff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  list-style: none;
+}
+
+.imagen-pokemon {
+  height: 195px;
+  width: 160px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
