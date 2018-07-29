@@ -51,4 +51,16 @@ body {
   margin: 15px;
 }
 
+.imagen-pokemon-2 {
+  height: 195px;
+  width: 160px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
