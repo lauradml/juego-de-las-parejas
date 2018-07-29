@@ -21,8 +21,8 @@ function llamada(){
     .then(function(pokemon){
       for (var x = 0; x < pokemon.length; x++){
         var newItem = document.createElement('li');
-        newItem.id='item'+x;
         lista.classList.add('tarjeta');
+
         // para añadir la imagen
         var imagePokemon1= document.createElement('img');
         imagePokemon1.classList.add('imagen-pokemon')
