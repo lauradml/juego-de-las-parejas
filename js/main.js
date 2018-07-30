@@ -3,6 +3,9 @@ var radios = document.querySelectorAll('.radio');
 var button = document.querySelector('.button-comenzar');
 var lista= document.querySelector('.lista');
 var valorRadio;
+var contador1=document.querySelector('.contador1');
+contador1.innerHTML= 0;
+var contador =0;
 
 for (var i = 0; i < radios.length; i++){
   radios[i].addEventListener('click', elegirNumero);
@@ -22,7 +25,8 @@ function llamada(){
       for (var x = 0; x < pokemon.length; x++){
         var newItem = document.createElement('li');
         lista.classList.add('tarjeta');
-
+        var parrafo= document.createElement('p')
+        var content = document.createTextNode(pokemon[x].pair);
         // para añadir la imagen
         var imagePokemon1= document.createElement('img');
         imagePokemon1.classList.add('imagen-pokemon')
@@ -34,9 +38,10 @@ function llamada(){
 
         imagePokemon1.addEventListener('click', cambiar);
         imagePokemon2.addEventListener('click', cambiar);
-
+        parrafo.appendChild(content);
         newItem.appendChild(imagePokemon1);
         newItem.appendChild(imagePokemon2);
+        newItem.appendChild(parrafo);
         lista.appendChild(newItem);
       }
     });
@@ -44,5 +49,9 @@ function llamada(){
 function cambiar(event) {
   event.currentTarget.parentElement.children[0].classList.toggle('hidden');
   event.currentTarget.parentElement.children[1].classList.toggle('hidden');
+
+  contador++;
+  contador1.innerHTML = contador;
 }
+
 button.addEventListener('click', llamada);
