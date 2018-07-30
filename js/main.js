@@ -25,7 +25,8 @@ function llamada(){
       for (var x = 0; x < pokemon.length; x++){
         var newItem = document.createElement('li');
         lista.classList.add('tarjeta');
-
+        var parrafo= document.createElement('p')
+        var content = document.createTextNode(pokemon[x].pair);
         // para añadir la imagen
         var imagePokemon1= document.createElement('img');
         imagePokemon1.classList.add('imagen-pokemon')
@@ -37,9 +38,10 @@ function llamada(){
 
         imagePokemon1.addEventListener('click', cambiar);
         imagePokemon2.addEventListener('click', cambiar);
-
+        parrafo.appendChild(content);
         newItem.appendChild(imagePokemon1);
         newItem.appendChild(imagePokemon2);
+        newItem.appendChild(parrafo);
         lista.appendChild(newItem);
       }
     });
