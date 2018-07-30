@@ -3,6 +3,9 @@ var radios = document.querySelectorAll('.radio');
 var button = document.querySelector('.button-comenzar');
 var lista= document.querySelector('.lista');
 var valorRadio;
+var contador1=document.querySelector('.contador1');
+contador1.innerHTML= 0;
+var contador =0;
 
 for (var i = 0; i < radios.length; i++){
   radios[i].addEventListener('click', elegirNumero);
@@ -44,5 +47,9 @@ function llamada(){
 function cambiar(event) {
   event.currentTarget.parentElement.children[0].classList.toggle('hidden');
   event.currentTarget.parentElement.children[1].classList.toggle('hidden');
+
+  contador++;
+  contador1.innerHTML = contador;
 }
+
 button.addEventListener('click', llamada);
